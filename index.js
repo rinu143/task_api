@@ -23,7 +23,7 @@ mongoose.connect(MONGO_URI).then(() => console.log("MongoDB connected"))
   });
 
 // app.use(express.static("static"));
-app.use("/", tasksRouter);
+app.use("/tasks", tasksRouter);
 app.get("/", (req, res) => res.sendFile(resolve(__dirname, "pages/index.html")));
 
 app.listen(PORT, () => console.log(`Server listening on http://localhost:${PORT}`));
